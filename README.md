@@ -5,7 +5,8 @@ It converts speech to text in real-time and processes user audio through a web i
 ## 🔧 Technologies Used
 - Python  
 - Flask  
-- OpenAI Whisper  
+- OpenAI Whisper
+- react
 
 ## 🚀 Features
 - Real-time voice-to-text conversion  
