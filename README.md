@@ -1,20 +1,20 @@
-# AI Voice Recognition System 🎙️
+# AI Voice Recognition System 
 An AI-based voice recognition system built using Python, OpenAI Whisper, and Flask.  
 It converts speech to text in real-time and processes user audio through a web interface.
 
-## 🔧 Technologies Used
+##  Technologies Used
 - Python  
 - Flask  
 - OpenAI Whisper
 - react
 
-## 🚀 Features
+##  Features
 - Real-time voice-to-text conversion  
 - Backend API using Flask  
 - Supports multiple audio formats
 
-## 🧠 Status
+##  Status
 Currently under development (learning Flask integration).
 
-## 👩‍💻 Author
+##  Author
 Kinjal Kathrecha  
