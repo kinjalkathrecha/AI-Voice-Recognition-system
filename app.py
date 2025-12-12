@@ -71,7 +71,7 @@ def get_user_progress(user_id):
 
 
 # ---------- LOAD MODELS ----------
-print("🧠 Loading Whisper model...")
+print(" Loading Whisper model...")
 whisper_model = whisper.load_model("tiny")
 
 print("📘 Loading Grammar Correction model (T5-base)...")
@@ -79,6 +79,7 @@ grammar_tokenizer = AutoTokenizer.from_pretrained("prithivida/grammar_error_corr
 grammar_model = AutoModelForSeq2SeqLM.from_pretrained("prithivida/grammar_error_correcter_v1")
 
 
+# ---------- HELPERS ----------
 def evaluate_pronunciation(audio_path):
     try:
         y, sr = librosa.load(audio_path, sr=None)
@@ -171,11 +172,11 @@ def recommend_lesson():
     p_score, g_score, last_topic = progress
 
     if p_score < 50:
-        recommendation = "🎧 Do listening & repetition practice."
+        recommendation = " Do listening & repetition practice."
     elif g_score < 70:
-        recommendation = "📝 Do basic grammar and writing exercises."
+        recommendation = " Do basic grammar and writing exercises."
     else:
-        recommendation = "🎤 Practice speaking longer sentences."
+        recommendation = " Practice speaking longer sentences."
 
     return jsonify({
         "pronunciation_avg": p_score,
@@ -185,5 +186,6 @@ def recommend_lesson():
     })
 
 
+# ---------- RUN ----------
 if __name__ == "__main__":
     app.run(debug=True, port=3000)
